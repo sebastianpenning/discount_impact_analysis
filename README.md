@@ -1,18 +1,15 @@
-# discount_analysis &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
-> Additional information or tag line
+# discount_analysis &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
 A project using SQL, Python, and Tableau in order to create a dashboard which showcases the impact of discounts on operations
 
-## Installing / Getting started
+## Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+First thing to get started is to download the Wide World Importers sample datebases from this link: https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-ver16 
 
-```shell
-commands here
-```
+This database works on SQL Server or Azure SQL Database
 
-Here you should say what actually happens when you execute the code above.
+The minimal setup you need in order to further develop this is to have either SQL Server or Azure SQL Database, a database tool such as SQL Server Management Studio or Azure Database Studio depending on your system, Python together with a IDE, and Tableau. 
+
 
 ## Developing
 
