@@ -13,6 +13,42 @@ The minimal setup you need in order to further develop this is to have either SQ
 
 ## Project  
 
+### SQL
+
+After initially looking through the database. There are several tables that are of interest in this project. These have been identified by using two standard procedures that were already available in the database. These two standard procedures were accesed in the code below. The data from these standard procedures were already interesting, so these queries were also used as the core of the data used for the analysis
+
+```sql
+EXEC Integration.GetPurchaseUpdates @LastCutoff = "2012", @NewCutoff = "2018";
+EXEC Integration.GetSaleupdates @LastCutoff = "2012", @NewCutoff = "2018";
+```
+
+The collumns of data that were queried for purchase updates standard procedure:
+
+(image of sp)
+
+The collumns of data that were queried for sale updates standard procedure:
+
+Both of these standard procedures queries were then downloaded with the option that can be found in Azure Data Studio (the database tool that was used in this project)
+
+(image)
+
+Following a search for which tables the standard procedures used, the utilized tables were queried with the code that can be found below. 
+
+```sql 
+SELECT * FROM Purchasing.Suppliers
+SELECT * FROM Warehouse.PackageTypes
+SELECT * FROM Application.Cities
+SELECT * FROM Application.StateProvinces
+```
+
+These tables, were then individualy 
+
+
+### Python
+
+
+### Tableau
+
 
 ## Database
 
