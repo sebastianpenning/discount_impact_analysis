@@ -22,11 +22,45 @@ EXEC Integration.GetPurchaseUpdates @LastCutoff = "2012", @NewCutoff = "2018";
 EXEC Integration.GetSaleupdates @LastCutoff = "2012", @NewCutoff = "2018";
 ```
 
-The collumns of data that were queried for purchase updates standard procedure:
+The columns of data that were queried for purchase updates standard procedure:
 
-(image of sp)
+|Columns|
+|-------|
+|Date Key|
+|WWI Purchase Order ID|
+|Ordered Outers|
+|Ordered Quantity|
+|Received Outers|
+|Package|
+|Is Order Finalized|
+|WWI Supplier ID|
+|WWI Stock Item ID|
+|Last Modified When|
 
-The collumns of data that were queried for sale updates standard procedure:
+The columns of data that were queried for sale updates standard procedure:
+
+|Columns|
+|-------|
+|Invoice Date Key|
+|Delivery Date Key|
+|WWI Invoice ID|
+|Description|
+|Package|
+|Quantity|
+|Unit Price|
+|Tax Rate|
+|Total Excluding Tax|
+|Tax Amount|
+|Profit|
+|Total Including Tax|
+|Total Dry Items|
+|Total Chiller Items|
+|WWI City ID|
+|WWI Customer ID|
+|WWI Bill To Customer ID|
+|WWI Stock Item ID|
+|WWI Saleperson ID|
+|Last Modified When|
 
 Both of these standard procedures queries were then downloaded with the option that can be found in Azure Data Studio (the database tool that was used in this project)
 
