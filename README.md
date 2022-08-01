@@ -86,8 +86,71 @@ ON Warehouse.StockItemStockGroups.StockGroupID = Warehouse.StockGroups.StockGrou
 
 ### Python
 
+Afterwards, the data was cleaned and reformatted using Pandas with python. The steps that were taken are described below. 
+
+First, the libraries neccessary were loaded in. 
+
+```python
+import pandas as pd
+import random
+```
+
+Next, the data itself 
+
+```python
+df = pd.read_csv("Path/to/csv")
+```
+
+It was decided to remove some of the data that was necessary for the analysis or which seemed not useful. This was done by dropping some of the columns of data 
+
+```python
+df.drop("Tax Rate", axis=1, inplace=True)
+df.drop("Profit", axis =1, inplace=True)
+df.drop("Tax Amount", axis=1, inplace=True)
+df.drop("Total Including Tax", axis=1, inplace=True)
+df.drop("Total Dry Items", axis=1, inplace=True)
+df.drop("Total Chiller Items", axis=1, inplace=True)
+```
+
+Also one column was renamed for clarification purposes
+
+```python
+df.rename(columns = {"Total Excluding Tax" : "Full Price Value"}, inplace=True)
+```
+
+Then a new column was created and data was created with some calculations to simulate the effect of discounts
+
+```python
+discount_value = []
+
+for sale in df["Discount"]:
+    discount_value.append(random.randint(1,15))
+    
+df["Discount"] = discount_value
+```
+
+And this was duely translated in other columns as well
+
+```python
+strike_price = df["Full Price Value"] * (1 - df["Discount"] / 100)
+
+df['transaction_price'] = strike_price
+value_lost = df["Full Price Value"] - df['transaction_price']
+
+df['value_lost'] = value_lost
+df['cogs'] = df["Full Price Value"] * 0.4
+df['actual_margin_multipier'] = df['transaction_price'] /  df['cogs']
+```
+
+Finally, the dataframe was saved back into a csv file
+
+```python 
+df.to_csv("Path/to/csv")
+```
 
 ### Tableau
+
+
 
 
 ## Database
