@@ -152,12 +152,19 @@ df.to_csv("Path/to/csv")
 
 This then translated into a visualization of on tableau, where first a general overview is given 
 
+![tableau image 1](https://github.com/sebastianpenning/discount_impact_analysis/blob/main/tableau_1.png)
 
 Followed by a more indepth analysis of the impact of discounts on certain processes.
 
+![tableau image 2](https://github.com/sebastianpenning/discount_impact_analysis/blob/main/tableau_2.png)
 
-The overal Viz can be found with this link: 
+The general overview Viz can be found with this link: https://public.tableau.com/views/DiscountImpactAnalysis/MARKDOWNIMPACTOVERVIEW?:language=en-GB&:display_count=n&:origin=viz_share_link
 
+Whereas the more indepth analysis can be found here: https://public.tableau.com/views/DiscountImpactAnalysis-2/MARKDOWNIMPACTANALYSIS?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link
+
+Each graph is also assigned as a filter, therefore the visualizations are customizable to preference as is shown here below. 
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/88779306/182137269-6f8f310d-4040-4087-9621-eaea2a71791f.gif)
 
 ## Database
 
