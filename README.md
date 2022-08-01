@@ -64,9 +64,9 @@ The columns of data that were queried for sale updates standard procedure:
 
 Both of these standard procedures queries were then downloaded with the option that can be found in Azure Data Studio (the database tool that was used in this project)
 
-(image)
+![download option csv azure](https://github.com/sebastianpenning/discount_impact_analysis/blob/main/download_option_azure.png)
 
-Following a search for which tables the standard procedures used, the utilized tables were queried with the code that can be found below. 
+What followed was a search for the extra tables which contained additional information referrenced in the standard procedures that was also useful for this analyse, the utilized tables were queried with the code that can be found below. These tables, were then individualy downloaded which the same process as described before.
 
 ```sql 
 SELECT * FROM Purchasing.Suppliers
@@ -74,9 +74,15 @@ SELECT * FROM Warehouse.PackageTypes
 SELECT * FROM Application.Cities
 SELECT * FROM Application.StateProvinces
 ```
+Finally one left join was done in order to have the names of "StockGroupName" together with the "StockItemStockGroupID", "StockItemID", and "StockGroupID". 
 
-These tables, were then individualy 
-
+```sql
+SELECT Warehouse.StockItemStockGroups.*, 
+            Warehouse.StockGroups.StockGroupName
+FROM Warehouse.StockItemStockGroups
+LEFT JOIN Warehouse.StockGroups
+ON Warehouse.StockItemStockGroups.StockGroupID = Warehouse.StockGroups.StockGroupID
+```
 
 ### Python
 
