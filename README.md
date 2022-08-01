@@ -150,7 +150,13 @@ df.to_csv("Path/to/csv")
 
 ### Tableau
 
+This then translated into a visualization of on tableau, where first a general overview is given 
 
+
+Followed by a more indepth analysis of the impact of discounts on certain processes.
+
+
+The overal Viz can be found with this link: 
 
 
 ## Database
